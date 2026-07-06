@@ -1,0 +1,14 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "x1sSAKtlB6CnAG_s0IwDR"
+uri = "file://artifacts/safron/public/images/hero-bg.png"
+type = "image"
+title = "Abstract corporate transformation hero"
+
+[[generated]]
+id = "QNvU_8vs1aOVtvIEVcXtJ"
+uri = "file://artifacts/safron/public/images/framework.png"
+type = "image"
+title = "Abstract strategic methodology"

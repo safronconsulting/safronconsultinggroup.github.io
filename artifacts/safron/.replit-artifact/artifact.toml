@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Safron"
+version = "1.0.0"
+id = "artifacts/safron"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23395
+
+[services.development]
+run = "pnpm --filter @workspace/safron run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/safron", "run", "build" ]
+publicDir = "artifacts/safron/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23395"
+BASE_PATH = "/"
